@@ -1,11 +1,6 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import React from 'react';
+import React from 'react'
+import Welcom from './src/layout/Welcom'
+import Welcom0 from './src/layout/Welcom0'
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -71,25 +66,24 @@ function App(): React.JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Header />
+        
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+              <>
+              
+                <Welcom0/> 
+                <>
+                <View>
+                  <Text style={styles.title1}>
+                  Next Wellcome Get Started page
+                  </Text>
+                </View>
+                </>
+                <Welcom/>
+
+              </>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -113,6 +107,19 @@ const styles = StyleSheet.create({
   highlight: {
     fontWeight: '700',
   },
+  Text:{
+    fontSize: 25,
+    fontWeight: "bold",
+    color: "grene",
+    backgroundColor:"black"
+  },
+  title1:{
+    fontSize: 20,
+    fontWeight: "condensedBold",
+    color: "white",
+    backgroundColor:"black",
+    alignContent:"center"
+  }
 });
 
 export default App;
